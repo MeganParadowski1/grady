@@ -1,4 +1,29 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
 .app-container {
-	margin: 20px;
-	background: url(images/site_bg3.jpg) cover no-repeat;
+	background: url(images/site_bg3.jpg) center center / cover no-repeat;
+	box-sizing: border-box;
+	border: 20px solid white;
+	height: 100vh;
+	animation: bgChange ease-in-out 1s 3s;
+	animation-fill-mode: backwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+@keyframes bgChange {
+	from {
+		background: #cdc8c4 url(images/primary_logo2.png) center center / contain no-repeat;
+	}
+    to {
+    	background: url(images/site_bg3.jpg) center center / cover no-repeat;
+    }
 }
