@@ -1,17 +1,154 @@
-body {
+html, body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	font-family: 'Inter', sans-serif;
 }
 .app-container {
-	background: url(images/site_bg3.jpg) center center / cover no-repeat;
+	position: relative;
 	box-sizing: border-box;
 	border: 20px solid white;
-	height: 100vh;
-	animation: bgChange ease-in-out 1s 3s;
-	animation-fill-mode: backwards;
+	height: 100%;
 }
-@keyframes fadeInAnimation {
+.bg-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	animation: fadeIn ease 6s;
+	animation-delay: 2s;
+	animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	background: url(images/site_bg5.png) center center / cover no-repeat;
+	z-index: -1;
+}
+.loading-img {
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 20px solid white;
+	background-color: #808080a8;
+	animation: fadeOut ease 2s;
+	animation-delay: 2s;
+	animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+.loading-img img {
+	position: absolute;
+	width: 150px;
+	height: 123px;
+	left: 50%;
+	margin-left: -75px;
+	top: 50%;
+	margin-top: -61.5px;
+}
+.content {
+	opacity: 0;
+	animation: fadeIn ease 5s;
+	animation-delay: 2s;
+	animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	display: grid;
+	grid-template-columns: 10% 1fr 10%;
+	grid-template-rows: 30% 1fr 30%;
+	height: 100%;
+}
+.header-img {
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+}
+.header-img img {
+	width: 100px;
+}
+.white-strip {
+	grid-column: 1 / span 3;
+	grid-row: 3 / span 1;
+	background-color: white;
+	animation: leftToRight ease 2s;
+	animation-delay: 5s;
+}
+.content-text {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+	margin: 20% auto;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: halogen, sans-serif;
+}
+.content-two {
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	grid-template-rows: 10% 1fr 10%;
+	height: 80%;
+}
+.content-two-text {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+	margin: auto;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #69696b;
+}
+.content-three {
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	grid-template-rows: 30% 1fr 30%;
+	height: 70%;
+	background-color: #ff470f;
+}
+.content-three-text {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+	margin: auto;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+}
+.content-three-text button {
+    display: block;
+    margin: 10% auto;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Inter';
+    color: white;
+    background-color: #ffffff40;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 600ms;
+}
+.content-three-text button:hover {
+  background-color: #ffffff21;
+}
+.content-footer {
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	grid-template-rows: 10% 1fr 10%;
+	height: 25%;
+	border-bottom: 20px solid white;
+}
+.content-footer img {
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+	height: 80px;
+	margin: 15%;
+}
+.content-footer-text {
+	grid-column: 3 / span 1;
+	grid-row: 1 / span 1;
+	margin: auto;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #69696b;
+}
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -19,11 +156,21 @@ body {
         opacity: 1;
      }
 }
-@keyframes bgChange {
-	from {
-		background: #cdc8c4 url(images/primary_logo2.png) center center / contain no-repeat;
-	}
-    to {
-    	background: url(images/site_bg3.jpg) center center / cover no-repeat;
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
     }
+    100% {
+        opacity: 0;
+     }
+}
+@media only screen and (max-width: 768px) {
+	.content-footer img {
+		height: initial;
+		width: 100%;
+		margin: 10px 0px;
+	}
+	.content-footer {
+		height: 10%;
+	}
 }
