@@ -60,9 +60,10 @@ html, body {
 .header-img {
 	grid-column: 1 / span 1;
 	grid-row: 1 / span 1;
+	margin: 10px;
 }
 .header-img img {
-	width: 100px;
+	width: 225px;
 }
 .white-strip {
 	grid-column: 1 / span 3;
@@ -93,7 +94,7 @@ html, body {
     font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
-    color: #69696b;
+    color: #0b1f31;
 }
 .content-three {
 	display: grid;
@@ -172,5 +173,8 @@ html, body {
 	}
 	.content-footer {
 		height: 10%;
+	}
+	.header-img img {
+		width: 150px;
 	}
 }
