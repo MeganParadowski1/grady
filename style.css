@@ -21,7 +21,7 @@ html, body {
 	animation-delay: 2s;
 	animation-iteration-count: 1;
     animation-fill-mode: forwards;
-	background: url(images/site_bg6.png) center center / cover no-repeat;
+	background: url(images/site_bg7.png) center center / cover no-repeat;
 	z-index: -1;
 }
 .loading-img {
