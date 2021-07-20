@@ -21,7 +21,7 @@ html, body {
 	animation-delay: 2s;
 	animation-iteration-count: 1;
     animation-fill-mode: forwards;
-	background: url(images/site_bg5.png) center center / cover no-repeat;
+	background: url(images/site_bg6.png) center center / cover no-repeat;
 	z-index: -1;
 }
 .loading-img {
@@ -129,25 +129,22 @@ html, body {
 }
 .content-footer {
 	display: grid;
-	grid-template-columns: 20% 1fr 20%;
-	grid-template-rows: 10% 1fr 10%;
-	height: 25%;
+	grid-template-columns: 20% 1fr 50%;
+	height: 20%;
 	border-bottom: 20px solid white;
+	align-items: end;
 }
 .content-footer img {
 	grid-column: 1 / span 1;
-	grid-row: 1 / span 1;
 	height: 80px;
-	margin: 15%;
 }
 .content-footer-text {
 	grid-column: 3 / span 1;
-	grid-row: 1 / span 1;
-	margin: auto;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     text-transform: uppercase;
-    color: #69696b;
+    color: #0b1f31;
+    text-align: right;
 }
 @keyframes fadeIn {
     0% {
@@ -165,14 +162,45 @@ html, body {
         opacity: 0;
      }
 }
+@keyframes border {
+	0% {
+		opacity: 1;
+		width: 0px;
+	}
+	100% {
+		opacity: 1;
+		width: 100%;
+	}
+}
+.border {
+	display: inline;
+	position: relative;
+    overflow: hidden;
+}
+.border:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #ff470f;
+    opacity: 0;
+    animation: border ease 1s;
+    animation-delay: 3.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 @media only screen and (max-width: 768px) {
 	.content-footer img {
 		height: initial;
 		width: 100%;
-		margin: 10px 0px;
 	}
 	.content-footer {
 		height: 10%;
+	}
+	.content-footer-text {
+		font-size: 11px;
 	}
 	.header-img img {
 		width: 150px;
