@@ -129,22 +129,25 @@ html, body {
 }
 .content-footer {
 	display: grid;
-	grid-template-columns: 20% 1fr 50%;
-	height: 20%;
-	border-bottom: 20px solid white;
-	align-items: end;
+    grid-template-columns: 20% 1fr 20%;
+    height: 20%;
+    border-bottom: 40px solid white;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
 }
 .content-footer img {
-	grid-column: 1 / span 1;
+	grid-column: 2 / span 1;
 	height: 80px;
+	margin: auto;
 }
 .content-footer-text {
-	grid-column: 3 / span 1;
+	grid-column: 2 / span 1;
     font-weight: 400;
     font-size: 12px;
     text-transform: uppercase;
     color: #0b1f31;
-    text-align: right;
+    text-align: center;
 }
 @keyframes fadeIn {
     0% {
@@ -192,13 +195,6 @@ html, body {
     animation-fill-mode: forwards;
 }
 @media only screen and (max-width: 768px) {
-	.content-footer img {
-		height: initial;
-		width: 100%;
-	}
-	.content-footer {
-		height: 10%;
-	}
 	.content-footer-text {
 		font-size: 11px;
 	}
