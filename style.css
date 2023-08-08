@@ -199,9 +199,22 @@ html, body {
 		margin: 15%;
 	}
 	.content-footer-text {
-		font-size: 11px;
+		font-size: 9px;
+		padding-top: 8px;
 	}
 	.header-img img {
 		width: 150px;
+	}
+	.content-footer img {
+		height: 60px;
+	}
+	.content-text {
+		font-size: 18px;
+	}
+	.content-two-text {
+		font-size: 14px;
+	}
+	.content-three-text {
+		font-size: 14px;
 	}
 }
